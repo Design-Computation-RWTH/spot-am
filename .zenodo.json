@@ -1,0 +1,47 @@
+{
+  "title": "SPOT-AM – Space Types Axis Mapping Ontology",
+  "description": "<p>SPOT-AM is an extension to the Space Types Ontology (SPOT) for the explicit definition of axes and boundary point mappings between Entity Spaces and their reference spaces (Entity, Document or Asset Space).</p><p>Namespace: <code>https://w3id.org/spot/am#</code> (prefix <code>spot-am</code>). This record contains the ontology source file (Turtle) and the ontology documentation.</p>",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Göbels, Anne",
+      "affiliation": "Design Computation, RWTH Aachen University"
+    },
+    {
+      "name": "Schulz, Oliver",
+      "affiliation": "Design Computation, RWTH Aachen University"
+    },
+    {
+      "name": "Rolke, Fabian",
+      "affiliation": "Design Computation, RWTH Aachen University"
+    }
+  ],
+  "keywords": [
+    "ontology",
+    "OWL",
+    "Linked Data",
+    "Linked Building Data",
+    "Semantic Web",
+    "spatial representation",
+    "axis mapping",
+    "built environment",
+    "AECO",
+    "SPOT"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://w3id.org/spot/am",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-softwaredocumentation"
+    },
+    {
+      "identifier": "https://github.com/Design-Computation-RWTH/spot",
+      "relation": "requires",
+      "resource_type": "dataset"
+    }
+  ]
+}
