@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/spot/am#"
+     xml:base="https://w3id.org/spot/am"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/spot/am">
+        <owl:imports rdf:resource="https://w3id.org/spot/"/>
+        <terms:created>2025-12-01</terms:created>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:creator rdf:nodeID="genid5"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">Space Types Axis Mapping Ontology</terms:title>
+        <vann:preferredNamespacePrefix>spot-am</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/spot/am#"/>
+        <voaf:extends rdf:resource="https://w3id.org/spot/"/>
+        <rdfs:comment xml:lang="en">An extension to the Space Types Ontology (SPOT) for the explicit definition of axes and boundary point mappings between Entity Spaces and their reference spaces (Entity, Document or Asset Space).</rdfs:comment>
+        <rdfs:label xml:lang="en">SPOT Axis Mapping Ontology</rdfs:label>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid2"/>
+        <schema:name>Anne Göbels</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/anne-gobels/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid4"/>
+        <schema:name>Oliver Schulz</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/oliver-schulz/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid6"/>
+        <schema:name>Fabian Rolke</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/fabian-rolke/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://schema.org/Organization"/>
+        <schema:name>Design Computation, RWTH Aachen University</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="http://schema.org/Organization"/>
+        <schema:name>Design Computation, RWTH Aachen University</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <rdf:type rdf:resource="http://schema.org/Organization"/>
+        <schema:name>Design Computation, RWTH Aachen University</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/</schema:url>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#extends -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocommons/voaf#extends"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/reloc#directionalRelation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/reloc#directionalRelation"/>
+    
+
+
+    <!-- https://w3id.org/spot#AppearsIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#AppearsIn">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/spot/am#hasAxisMapping"/>
+            <rdf:Description rdf:about="https://w3id.org/spot/am#hasTargetAxis"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/spot/am#hasBoundaryPointMapping"/>
+            <rdf:Description rdf:about="https://w3id.org/reloc#directionalRelation"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasAccuracy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasAccuracy">
+        <rdfs:domain rdf:resource="https://w3id.org/spot/am#AxisMapping"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot/am#Accuracy"/>
+        <rdfs:comment xml:lang="en">Specifies the accuracy level of an axis mapping.</rdfs:comment>
+        <rdfs:label xml:lang="en">has accuracy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasAxisMapping -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasAxisMapping">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot/am#AxisMapping"/>
+        <rdfs:comment xml:lang="en">Relates an appearance to an axis mapping object. One appearance can have multiple Axis Mappings. Typically three: For each Entity Axis one.</rdfs:comment>
+        <rdfs:label xml:lang="en">has axis mapping</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasAxisRelationType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasAxisRelationType">
+        <rdfs:domain rdf:resource="https://w3id.org/spot/am#AxisMapping"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot/am#AxisRelationType"/>
+        <rdfs:comment xml:lang="en">Specifies which kind of geometrical relation the two mapped axes have to each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">has axis relation type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasBoundaryPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasBoundaryPoint">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Axis"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot/am#BoundaryPoint"/>
+        <rdfs:comment xml:lang="en">Relates an axis to a boundary point. These points can than be mapped/related to a reference space.
+        Usually, only Axes of Entity Spaces get Boundary Point Definitions.</rdfs:comment>
+        <rdfs:label xml:lang="en">has boundary point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasBoundaryPointMapping -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasBoundaryPointMapping">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot/am#BoundaryPointMapping"/>
+        <rdfs:comment xml:lang="en">Relates an appearance to a boundary point mapping. Each appearance can have multiple boundary point mappings.
+     For mappings of volume spaces, up to 6 boundary points mappings are usually needed (min and max point of each axis).</rdfs:comment>
+        <rdfs:label xml:lang="en">has boundary point mapping</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasSourceAxis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasSourceAxis">
+        <rdfs:domain rdf:resource="https://w3id.org/spot/am#AxisMapping"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/spot#Axis"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="https://w3id.org/spot#hasAxis"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spot#EntitySpace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Specifies which Entity Axis/Source axis is being mapped. Only Axes from Entity Spaces should be in the range of this property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has source axis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasSourcePoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasSourcePoint">
+        <rdfs:domain rdf:resource="https://w3id.org/spot/am#BoundaryPointMapping"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot/am#BoundaryPoint"/>
+        <rdfs:comment xml:lang="en">Specifies which EntityAxis/ Source boundary point is being mapping</rdfs:comment>
+        <rdfs:label xml:lang="en">has source point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot/am#hasTargetAxis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot/am#hasTargetAxis">
+        <rdfs:domain rdf:resource="https://w3id.org/spot/am#AxisMapping"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Axis"/>
+        <rdfs:comment xml:lang="en">Specifies to which target axis the source axis is mapped. The target axis must be from another space instance
+    as the source axis.</rdfs:comment>
+        <rdfs:label xml:lang="en">has target axis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/spot/am#Accuracy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#Accuracy">
+        <rdfs:comment xml:lang="en">The level of accuracy for an axis mapping.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accuracy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot/am#AxisMapping -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#AxisMapping">
+        <rdfs:comment xml:lang="en">The Axis Mapping is related to an Appearance of an Entity Space
+    and defines which Axis of the Entity Space (Source Axis) can be mapped to which Axis of the Reference Space
+     (another Entity, Document or Asset Space). This relation can be further specified with an accuracy.
+     An AxisMapping object can only relate on Source Axis to one Reference Axis.
+     Thus, typically, each Entity Space Appearance links to three Axis Mapping objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">Axis Mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot/am#AxisRelationType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#AxisRelationType">
+        <rdfs:comment xml:lang="en">Defines the geometrical relation between two mapped axes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Axis Relation Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot/am#BoundaryPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#BoundaryPoint">
+        <rdfs:comment xml:lang="en">A point that defines a boundary of an Entity Space on a specific Axis. </rdfs:comment>
+        <rdfs:label xml:lang="en">Boundary Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot/am#BoundaryPointMapping -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#BoundaryPointMapping">
+        <rdfs:comment xml:lang="en">The Boundary Point Mapping describes the relation of an Entity Axis Boundary Point (Source Point)
+        to the reference space. The relation can be expressed by Directional Properties of the RELOC Ontology
+        (e.g., containedInFront/Right/Bottom etc.) in relation to the reference space.</rdfs:comment>
+        <rdfs:label xml:lang="en">Boundary Point Mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot/am#MaxBoundaryPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#MaxBoundaryPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot/am#BoundaryPoint"/>
+        <rdfs:comment xml:lang="en">A point that represents the maximum/upper boundary of an Entity Space on a specific Axis</rdfs:comment>
+        <rdfs:label xml:lang="en">Maximum Boundary Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot/am#MinBoundaryPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot/am#MinBoundaryPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot/am#BoundaryPoint"/>
+        <rdfs:comment xml:lang="en">A point that represents the minimum/lower boundary of an Entity Space on a specific Axis </rdfs:comment>
+        <rdfs:label xml:lang="en">Minimum Boundary Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/spot/am#Antiparallel -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot/am#Antiparallel">
+        <rdf:type rdf:resource="https://w3id.org/spot/am#AxisRelationType"/>
+        <rdfs:comment xml:lang="en">The source axis is antiparallel (parallel but directed in opposite direction) to the target axis.</rdfs:comment>
+        <rdfs:label xml:lang="en">Antiparallel</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.oed.com/dictionary/antiparallel_adj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot/am#Approximate -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot/am#Approximate">
+        <rdf:type rdf:resource="https://w3id.org/spot/am#Accuracy"/>
+        <rdfs:comment xml:lang="en">The relationship between the axes defined in the axis mapping corresponds closely to reality, with minor deviations (e.g., nearly parallel axes).</rdfs:comment>
+        <rdfs:label xml:lang="en">Approximate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot/am#Broad -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot/am#Broad">
+        <rdf:type rdf:resource="https://w3id.org/spot/am#Accuracy"/>
+        <rdfs:comment xml:lang="en">The source axis is assigned to the closest matching target axis in the context of the defined relationship, despite significant discrepancies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Broad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot/am#Codirectional -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot/am#Codirectional">
+        <rdf:type rdf:resource="https://w3id.org/spot/am#AxisRelationType"/>
+        <rdfs:comment xml:lang="en">The source axis is parallel to the target axis and having the same direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Codirectional</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.oed.com/dictionary/codirectional_adj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot/am#Exact -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot/am#Exact">
+        <rdf:type rdf:resource="https://w3id.org/spot/am#Accuracy"/>
+        <rdfs:comment xml:lang="en">The relationship between the axes defined in the axis mapping corresponds exactly to reality.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exact</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

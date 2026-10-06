@@ -1,0 +1,1106 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "https://w3id.org/spot/am", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/reloc", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/spot" ],
+    "title" : {
+      "en" : "Space Types Axis Mapping Ontology"
+    },
+    "iri" : "https://w3id.org/spot/am",
+    "version" : "1.0.0",
+    "author" : [ "_:genid2147483668", "_:genid2147483666", "_:genid2147483664" ],
+    "labels" : {
+      "en" : "SPOT Axis Mapping Ontology"
+    },
+    "comments" : {
+      "en" : "An extension to the Space Types Ontology (SPOT) for the explicit definition of axes and boundary point mappings between Entity Spaces and their reference spaces (Entity, Document or Asset Space)."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483666",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483664",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483668",
+        "type" : "label"
+      } ],
+      "extends" : [ {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "https://w3id.org/spot/",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-12-01",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "spot-am",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/spot/am#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Space Types Axis Mapping Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "57",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/spot#VirtualSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VirtualSpace",
+      "en" : "Virtual Space"
+    },
+    "subClasses" : [ "2" ],
+    "comment" : {
+      "en" : "The Virtual Space represent resource spaces, which cannot be directly mapped to the real physical space,\n     as their spatial arrangement is artificial. For example 2D plans with a collection of drawings\n     or a file containing multiple disjointed 3D models of the same asset.  It is an abstract class and should not be used directly."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/spot#EntityAppearance",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntityAppearance",
+      "en" : "Entity Appearance"
+    },
+    "comment" : {
+      "en" : "The appearance of an entity space in another (parent/super) entity space"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/spot/am#BoundaryPointMapping",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoundaryPointMapping",
+      "en" : "Boundary Point Mapping"
+    },
+    "comment" : {
+      "en" : "The Boundary Point Mapping describes the relation of an Entity Axis Boundary Point (Source Point)\r\n        to the reference space. The relation can be expressed by Directional Properties of the RELOC Ontology\r\n        (e.g., containedInFront/Right/Bottom etc.) and/or as a Normalized Coordinate in relation to the reference space.\r\n        If both properties are given the the normalized coordinate is to be interpreted in the context of the area\r\n        defined by the RELOC Property (e.g., Point <reloc:containedInRight> RefSpace.\r\n        --> '0.5' describes the center of the Right Area of the Reference Space)"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/spot/am#MaxBoundaryPoint",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaxBoundaryPoint",
+      "en" : "Maximum Boundary Point"
+    },
+    "comment" : {
+      "en" : "A point that represents the maximum/upper boundary of an Entity Space on a specific Axis"
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://schema.org/Person",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/spot#DocumentAppearance",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DocumentAppearance",
+      "en" : "Document Appearance"
+    },
+    "comment" : {
+      "en" : "The appearance of an entity space in a document space"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/spot#PointSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointSpace",
+      "en" : "Point Space"
+    },
+    "comment" : {
+      "en" : "The Point Space can represent resources that only need one point of reference,\n    such as the camera position of a picture or the position of a sensor."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://schema.org/Organization",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/spot#AreaSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AreaSpace",
+      "en" : "Area Space"
+    },
+    "subClasses" : [ "25", "26" ],
+    "comment" : {
+      "en" : "A two-dimensional space that can be used to represent resources like 2D drawings or maps "
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/spot#Space",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Space",
+      "en" : "Space"
+    },
+    "subClasses" : [ "0", "29" ],
+    "comment" : {
+      "en" : "The abstract superclass for all defined space types."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/spot#AssetAppearance",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssetAppearance",
+      "en" : "Asset Appearance"
+    },
+    "comment" : {
+      "en" : "The appearance of entity space in an asset space"
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/spot#HorizontalAreaSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HorizontalAreaSpace",
+      "en" : "Horizontal Area Space"
+    },
+    "comment" : {
+      "en" : "The Horizontal Area Space is a subtype of Area Space, that implies that the plane of the resource\n     is parallel to the horizontal plane of the asset space. Floorplans or maps are typical horizontal area spaces."
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/spot#AssetSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssetSpace",
+      "en" : "Asset Space"
+    },
+    "comment" : {
+      "en" : "\"The Asset Space represents the actual, physical asset.\n        An instance of the Asset Space is the superordinate object for the spatial superimposition of Entity Space instances."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "https://w3id.org/spot/am#BoundaryPoint",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoundaryPoint",
+      "en" : "Boundary Point"
+    },
+    "subClasses" : [ "6", "43" ],
+    "comment" : {
+      "en" : "A point that defines a boundary of an Entity Space on a specific Axis. "
+    },
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/spot#VerticalAreaSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VerticalAreaSpace",
+      "en" : "Vertical Area Space"
+    },
+    "comment" : {
+      "en" : "The Vertical Area Space is a subtype of Area Space, that implies that the plane of the resource is\n     parallel to the vertical axis of the asset space. Section drawings are typical vertical area spaces."
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "28",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/spot/am#Accuracy",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accuracy",
+      "en" : "Accuracy"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/spot/am#Broad",
+      "baseIri" : "https://w3id.org/spot/am",
+      "comment" : {
+        "en" : "The source axis is assigned to the closest matching target axis in the context of the defined relationship, despite significant discrepancies."
+      },
+      "labels" : {
+        "IRI-based" : "Broad",
+        "en" : "Broad"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot/am#Exact",
+      "baseIri" : "https://w3id.org/spot/am",
+      "comment" : {
+        "en" : "The relationship between the axes defined in the axis mapping corresponds exactly to reality."
+      },
+      "labels" : {
+        "IRI-based" : "Exact",
+        "en" : "Exact"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot/am#Approximate",
+      "baseIri" : "https://w3id.org/spot/am",
+      "comment" : {
+        "en" : "The relationship between the axes defined in the axis mapping corresponds closely to reality, with minor deviations (e.g., nearly parallel axes)."
+      },
+      "labels" : {
+        "IRI-based" : "Approximate",
+        "en" : "Approximate"
+      }
+    } ],
+    "comment" : {
+      "en" : "The level of accuracy for an axis mapping. Can be derived from angles if provided."
+    },
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "32",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "57",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/spot/am#AxisRelationType",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AxisRelationType",
+      "en" : "Axis Relation Type"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/spot/am#Codirectional",
+      "baseIri" : "https://w3id.org/spot/am",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://www.oed.com/dictionary/codirectional_adj",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The source axis is parallel to the target axis and having the same direction."
+      },
+      "labels" : {
+        "IRI-based" : "Codirectional",
+        "en" : "Codirectional"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot/am#Antiparallel",
+      "baseIri" : "https://w3id.org/spot/am",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://www.oed.com/dictionary/antiparallel_adj",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The source axis is antiparallel (parallel but directed in opposite direction) to the target axis."
+      },
+      "labels" : {
+        "IRI-based" : "Antiparallel",
+        "en" : "Antiparallel"
+      }
+    } ],
+    "comment" : {
+      "en" : "Defines the geometrical relation between two mapped axes."
+    },
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/spot#VolumeSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VolumeSpace",
+      "en" : "Volume Space"
+    },
+    "comment" : {
+      "en" : "The Volume Space can represent three-dimensional resources, such as 3D models or point clouds."
+    },
+    "attributes" : [ "external" ],
+    "id" : "46",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/spot/am#AxisMapping",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AxisMapping",
+      "en" : "Axis Mapping"
+    },
+    "comment" : {
+      "en" : "The Axis Mapping is related to an Appearance of an Entity Space\r\n    and defines which Axis of the Entity Space (Source Axis) can be mapped to which Axis of the Reference Space\r\n     (another Entity, Document or Asset Space). This relation can be further specified with an angle and accuracy.\r\n     An AxisMapping object can only relate on Source Axis to one Reference Axis.\r\n     Thus, typically, each Entity Space Appearance links to three Axis Mapping objects."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/spot#DocumentSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DocumentSpace",
+      "en" : "Document Space"
+    },
+    "comment" : {
+      "en" : "The Document Space represents the extent of a document or file that contains Entity Spaces.\n    A Document Space can represent different, disjointed Entity Spaces, such as a collection of sections and\n     details on a construction plan."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "https://w3id.org/spot#Axis",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Axis",
+      "en" : "Axis"
+    },
+    "comment" : {
+      "en" : "An axis of the local coordinate system of a space instance"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/spot#EntitySpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntitySpace",
+      "en" : "Entity Space"
+    },
+    "subClasses" : [ "20", "46", "24" ],
+    "comment" : {
+      "en" : "The Entity Space is a coherent unit of information covered by a single resource, such as a 3D model,\n     a 2D drawing, or a picture, representing its actual dimensions referring to the Asset Space."
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "https://w3id.org/spot#PhysicalSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalSpace",
+      "en" : "Physical Space"
+    },
+    "subClasses" : [ "15", "36" ],
+    "comment" : {
+      "en" : "The Physical Space is the superclass for the global, asset and entity spaces,\n    which implies that these spaces are can be directly mapped in physical space, as opposite to virtual spaces.\n    It is an abstract class and should not be used directly."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/spot#Appearance",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Appearance",
+      "en" : "Appearance"
+    },
+    "subClasses" : [ "3", "12", "34" ],
+    "comment" : {
+      "en" : "The appearance of an entity space in a reference space (Asset, Document or another Entity Space).\n    The appearance object serves as a container/reference to assign spatial relation definitions for the relationship\n    between the Entity Space instance and the space where it appears in."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/spot/am#MinBoundaryPoint",
+    "baseIri" : "https://w3id.org/spot/am",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MinBoundaryPoint",
+      "en" : "Minimum Boundary Point"
+    },
+    "comment" : {
+      "en" : "A point that represents the minimum/lower boundary of an Entity Space on a specific Axis "
+    },
+    "id" : "43",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/spot#Direction",
+    "baseIri" : "https://w3id.org/spot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Direction",
+      "en" : "Direction"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/spot#Left",
+      "baseIri" : "https://w3id.org/spot",
+      "comment" : {
+        "en" : "The left of an asset or document space"
+      },
+      "labels" : {
+        "IRI-based" : "Left",
+        "en" : "Left"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot#Top",
+      "baseIri" : "https://w3id.org/spot",
+      "comment" : {
+        "en" : "The top of an asset or document space"
+      },
+      "labels" : {
+        "IRI-based" : "Top",
+        "en" : "Top"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot#Rear",
+      "baseIri" : "https://w3id.org/spot",
+      "comment" : {
+        "en" : "The rear of an asset or document space"
+      },
+      "labels" : {
+        "IRI-based" : "Rear",
+        "en" : "Rear"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot#Front",
+      "baseIri" : "https://w3id.org/spot",
+      "comment" : {
+        "en" : "The front of an asset or document space."
+      },
+      "labels" : {
+        "IRI-based" : "Front",
+        "en" : "Front"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot#Bottom",
+      "baseIri" : "https://w3id.org/spot",
+      "comment" : {
+        "en" : "The bottom of an asset or document space"
+      },
+      "labels" : {
+        "IRI-based" : "Bottom",
+        "en" : "Bottom"
+      }
+    }, {
+      "iri" : "https://w3id.org/spot#Right",
+      "baseIri" : "https://w3id.org/spot",
+      "comment" : {
+        "en" : "The right of an asset or document space"
+      },
+      "labels" : {
+        "IRI-based" : "Right",
+        "en" : "Right"
+      }
+    } ],
+    "comment" : {
+      "en" : "The defined direction of an axis (e.g., an X-Axis is pointing to the 'Front' of the asset,\n     or an Y-Axis is pointing to the 'Bottom' of a document / plan ).\n     Only Asset Space or Document Space Axis should get an Direction Definition."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
+  } ],
+  "property" : [ {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/spot/am#hasAxisMapping",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasAxisMapping",
+      "en" : "has axis mapping"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates an appearance to an axis mapping object. One appearance can have multiple Axis Mappings. Typically three: For each Entity Axis one."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasBoundaryPointMapping",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasBoundaryPointMapping",
+      "en" : "has boundary point mapping"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates an appearance to a boundary point mapping. Each appearance can have multiple boundary point mappings.\r\n     For mappings of volume spaces, up to 6 boundary points mappings are usually needed (min and max point of each axis)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/spot#hasSuperSpace",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasSuperSpace",
+      "en" : "has super space"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "\"Relates a space to its containing/parent/super space.\n    This property can be derived by the propert chain: spaceA <hasAppearance> AppearanceX <appearsIn> spaceB "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/spot#hasAppearance",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasAppearance",
+      "en" : "has appearance"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Relates an Entity space to an appearance object"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasSourcePoint",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasSourcePoint",
+      "en" : "has source point"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Specifies which EntityAxis/ Source boundary point is being mapping"
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/spot#hasXAxis",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasXAxis",
+      "en" : "has X axis"
+    },
+    "superproperty" : [ "19" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a space to its X axis"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasAccuracy",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasAccuracy",
+      "en" : "has accuracy"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Specifies the accuracy level of an axis mapping."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasSourceAxis",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasSourceAxis",
+      "en" : "has source axis"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Specifies which Entity Axis/Source axis is being mapped. Only Axes from Entity Spaces should be in the range of this property."
+    },
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/spot#hasYAxis",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasYAxis",
+      "en" : "has Y axis"
+    },
+    "superproperty" : [ "19" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a space to its Y axis"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/spot#AppearsIn",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "AppearsIn"
+    },
+    "domain" : "32",
+    "attributes" : [ "object", "external" ],
+    "id" : "31"
+  }, {
+    "range" : "4",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "29",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasAxisRelationType",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasAxisRelationType",
+      "en" : "has axis relation type"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Specifies which kind of geometrical relation the two mapped axes have to each other."
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "range" : "29",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "4",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "15",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "15",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "15",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/spot#appearsIn",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "appearsIn",
+      "en" : "appears in"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates an appearance to the space in which it appears"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/spot#hasZAxis",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasZAxis",
+      "en" : "has Z axis"
+    },
+    "superproperty" : [ "19" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a space to its Z axis"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "48"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/reloc#directionalRelation",
+    "baseIri" : "https://w3id.org/reloc",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "directionalRelation"
+    },
+    "domain" : "32",
+    "attributes" : [ "object", "external" ],
+    "id" : "50"
+  }, {
+    "range" : "24",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "24",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "1",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "7",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/spot#hasAxis",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasAxis",
+      "en" : "has axis"
+    },
+    "domain" : "1",
+    "subproperty" : [ "17", "30", "48" ],
+    "comment" : {
+      "en" : "Relates a space to an axis"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasTargetAxis",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasTargetAxis",
+      "en" : "has target axis"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Specifies to which target axis the source axis is mapped. The target axis must be from another space instance\r\n    as the source axis."
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/spot/am#hasBoundaryPoint",
+    "baseIri" : "https://w3id.org/spot/am",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasBoundaryPoint",
+      "en" : "has boundary point"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Relates an axis to a boundary point. These points can than be mapped/related to a reference space.\r\n        Usually, only Axes of Entity Spaces get Boundary Point Definitions."
+    },
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/spot#hasDirection",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "hasDirection",
+      "en" : "has direction"
+    },
+    "domain" : "57",
+    "comment" : {
+      "en" : "Defines the direction of an axis. Should only be used for axes of Asset or Document Spaces."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/spot#hasSubspace",
+    "inverse" : "13",
+    "baseIri" : "https://w3id.org/spot",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasSubspace",
+      "en" : "has subspace"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a space to a space it contains"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
+  } ]
+}

@@ -1,0 +1,433 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://schema.org/Person" ],
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Anne Göbels"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/anne-gobels/"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/spot#Axis"
+    }, {
+      "@id" : "_:genid13"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/spot#EntitySpace"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/spot#hasAxis"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://schema.org/Organization" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Design Computation, RWTH Aachen University"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://schema.org/Person" ],
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Oliver Schulz"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/oliver-schulz/"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://schema.org/Organization" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Design Computation, RWTH Aachen University"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://schema.org/Person" ],
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Fabian Rolke"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/fabian-rolke/"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://schema.org/Organization" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Design Computation, RWTH Aachen University"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocommons/voaf#extends",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/reloc#directionalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/spot#AppearsIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/spot/am#hasAxisMapping"
+    }, {
+      "@id" : "https://w3id.org/spot/am#hasTargetAxis"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/spot/am#hasBoundaryPointMapping"
+    }, {
+      "@id" : "https://w3id.org/reloc#directionalRelation"
+    } ]
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2025-12-01"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Space Types Axis Mapping Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "spot-am"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/spot/am#"
+  } ],
+  "http://purl.org/vocommons/voaf#extends" : [ {
+    "@id" : "https://w3id.org/spot/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An extension to the Space Types Ontology (SPOT) for the explicit definition of axes and boundary point mappings between Entity Spaces and their reference spaces (Entity, Document or Asset Space)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SPOT Axis Mapping Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/spot/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#Accuracy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The level of accuracy for an axis mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Accuracy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#Antiparallel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot/am#AxisRelationType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The source axis is antiparallel (parallel but directed in opposite direction) to the target axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Antiparallel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.oed.com/dictionary/antiparallel_adj"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#Approximate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot/am#Accuracy" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between the axes defined in the axis mapping corresponds closely to reality, with minor deviations (e.g., nearly parallel axes)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Approximate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#AxisMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Axis Mapping is related to an Appearance of an Entity Space\r\n    and defines which Axis of the Entity Space (Source Axis) can be mapped to which Axis of the Reference Space\r\n     (another Entity, Document or Asset Space). This relation can be further specified with an accuracy.\r\n     An AxisMapping object can only relate on Source Axis to one Reference Axis.\r\n     Thus, typically, each Entity Space Appearance links to three Axis Mapping objects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Axis Mapping"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#AxisRelationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the geometrical relation between two mapped axes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Axis Relation Type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#BoundaryPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A point that defines a boundary of an Entity Space on a specific Axis. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boundary Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#BoundaryPointMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Boundary Point Mapping describes the relation of an Entity Axis Boundary Point (Source Point)\r\n        to the reference space. The relation can be expressed by Directional Properties of the RELOC Ontology\r\n        (e.g., containedInFront/Right/Bottom etc.) in relation to the reference space.\r\n "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boundary Point Mapping"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#Broad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot/am#Accuracy" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The source axis is assigned to the closest matching target axis in the context of the defined relationship, despite significant discrepancies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Broad"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#Codirectional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot/am#AxisRelationType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The source axis is parallel to the target axis and having the same direction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Codirectional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.oed.com/dictionary/codirectional_adj"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#Exact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot/am#Accuracy" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between the axes defined in the axis mapping corresponds exactly to reality."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Exact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#MaxBoundaryPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A point that represents the maximum/upper boundary of an Entity Space on a specific Axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maximum Boundary Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot/am#BoundaryPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#MinBoundaryPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A point that represents the minimum/lower boundary of an Entity Space on a specific Axis "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Minimum Boundary Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot/am#BoundaryPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasAccuracy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the accuracy level of an axis mapping."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot/am#AxisMapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has accuracy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot/am#Accuracy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasAxisMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an appearance to an axis mapping object. One appearance can have multiple Axis Mappings. Typically three: For each Entity Axis one."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has axis mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot/am#AxisMapping"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasAxisRelationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies which kind of geometrical relation the two mapped axes have to each other."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot/am#AxisMapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has axis relation type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot/am#AxisRelationType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasBoundaryPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an axis to a boundary point. These points can than be mapped/related to a reference space.\r\n        Usually, only Axes of Entity Spaces get Boundary Point Definitions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has boundary point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot/am#BoundaryPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasBoundaryPointMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an appearance to a boundary point mapping. Each appearance can have multiple boundary point mappings.\r\n     For mappings of volume spaces, up to 6 boundary points mappings are usually needed (min and max point of each axis)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has boundary point mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot/am#BoundaryPointMapping"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasSourceAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies which Entity Axis/Source axis is being mapped. Only Axes from Entity Spaces should be in the range of this property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot/am#AxisMapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has source axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasSourcePoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies which EntityAxis/ Source boundary point is being mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot/am#BoundaryPointMapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has source point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot/am#BoundaryPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/am#hasTargetAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies to which target axis the source axis is mapped. The target axis must be from another space instance\r\n    as the source axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot/am#AxisMapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has target axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Axis"
+  } ]
+} ]

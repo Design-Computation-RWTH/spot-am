@@ -1,0 +1,194 @@
+@prefix spot-am: <https://w3id.org/spot/am#> .
+@prefix spot: <https://w3id.org/spot#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reloc: <https://w3id.org/reloc#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix schema: <http://schema.org/> .
+
+# Ontology Declaration
+<https://w3id.org/spot/am> a owl:Ontology ;
+    rdfs:label "SPOT Axis Mapping Ontology"@en ;
+    rdfs:comment "An extension to the Space Types Ontology (SPOT) for the explicit definition of axes and boundary point mappings between Entity Spaces and their reference spaces (Entity, Document or Asset Space)."@en ;
+    owl:imports <https://w3id.org/spot/> ;
+    voaf:extends <https://w3id.org/spot/> ;
+    dcterms:created "2025-12-01" ;
+    dcterms:creator [
+            a schema:Person;
+            schema:name "Anne Göbels";
+            schema:url "https://dc.rwth-aachen.de/anne-gobels/";
+            schema:affiliation [
+                a schema:Organization;
+                schema:name "Design Computation, RWTH Aachen University";
+                schema:url "https://dc.rwth-aachen.de/"
+                        ]
+               ]
+         ,[
+            a schema:Person;
+            schema:name "Oliver Schulz";
+            schema:url "https://dc.rwth-aachen.de/oliver-schulz/";
+            schema:affiliation [
+                a schema:Organization;
+                schema:name "Design Computation, RWTH Aachen University";
+                schema:url "https://dc.rwth-aachen.de/"
+                        ]
+        ],
+        [
+            a schema:Person;
+            schema:name "Fabian Rolke";
+            schema:url "https://dc.rwth-aachen.de/fabian-rolke/";
+            schema:affiliation [
+                a schema:Organization;
+                schema:name "Design Computation, RWTH Aachen University";
+                schema:url "https://dc.rwth-aachen.de/"
+                        ]
+        ] ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Space Types Axis Mapping Ontology"@en ;
+    vann:preferredNamespacePrefix "spot-am" ;
+    vann:preferredNamespaceUri <https://w3id.org/spot/am#> ;
+    owl:versionInfo "1.0.0" .
+
+# Classes
+spot-am:AxisMapping a owl:Class ;
+    rdfs:label "Axis Mapping"@en ;
+    rdfs:comment """The Axis Mapping is related to an Appearance of an Entity Space
+    and defines which Axis of the Entity Space (Source Axis) can be mapped to which Axis of the Reference Space
+     (another Entity, Document or Asset Space). This relation can be further specified with an angle and accuracy.
+     An AxisMapping object can only relate on Source Axis to one Reference Axis.
+     Thus, typically, each Entity Space Appearance links to three Axis Mapping objects."""@en;
+.
+
+spot-am:BoundaryPoint a owl:Class ;
+    rdfs:label "Boundary Point"@en ;
+    rdfs:comment "A point that defines a boundary of an Entity Space on a specific Axis. "@en .
+
+spot-am:MinBoundaryPoint a owl:Class ;
+    rdfs:subClassOf spot-am:BoundaryPoint ;
+    rdfs:label "Minimum Boundary Point"@en ;
+    rdfs:comment "A point that represents the minimum/lower boundary of an Entity Space on a specific Axis "@en .
+
+spot-am:MaxBoundaryPoint a owl:Class ;
+    rdfs:subClassOf spot-am:BoundaryPoint ;
+    rdfs:label "Maximum Boundary Point"@en ;
+    rdfs:comment "A point that represents the maximum/upper boundary of an Entity Space on a specific Axis"@en .
+
+spot-am:BoundaryPointMapping a owl:Class ;
+    rdfs:label "Boundary Point Mapping"@en ;
+    rdfs:comment """The Boundary Point Mapping describes the relation of an Entity Axis Boundary Point (Source Point)
+        to the reference space. The relation can be expressed by Directional Properties of the RELOC Ontology
+        (e.g., containedInFront/Right/Bottom etc.) and/or as a Normalized Coordinate in relation to the reference space.
+        If both properties are given the the normalized coordinate is to be interpreted in the context of the area
+        defined by the RELOC Property (e.g., Point <reloc:containedInRight> RefSpace.
+        --> '0.5' describes the center of the Right Area of the Reference Space)"""@en .
+
+spot-am:AxisRelationType a owl:Class ;
+    rdfs:label "Axis Relation Type"@en ;
+    rdfs:comment "Defines the geometrical relation between two mapped axes."@en .
+
+# Axis Relation Type Individuals
+spot-am:Codirectional a owl:NamedIndividual , spot-am:AxisRelationType ;
+    rdfs:label "Codirectional"@en ;
+    rdfs:comment "The source axis is parallel to the target axis and having the same direction."@en;
+    rdfs:seeAlso <https://www.oed.com/dictionary/codirectional_adj> .
+
+spot-am:Antiparallel a owl:NamedIndividual , spot-am:AxisRelationType ;
+    rdfs:label "Antiparallel"@en ;
+    rdfs:comment "The source axis is antiparallel (parallel but directed in opposite direction) to the target axis."@en ;
+    rdfs:seeAlso <https://www.oed.com/dictionary/antiparallel_adj>.
+
+
+# Accuracy Individuals
+spot-am:Accuracy a owl:Class ;
+    rdfs:label "Accuracy"@en ;
+    rdfs:comment "The level of accuracy for an axis mapping. Can be derived from angles if provided."@en .
+
+spot-am:Exact a owl:NamedIndividual , spot-am:Accuracy ;
+    rdfs:label "Exact"@en ;
+    rdfs:comment "The relationship between the axes defined in the axis mapping corresponds exactly to reality."@en .
+
+spot-am:Approximate a owl:NamedIndividual , spot-am:Accuracy ;
+    rdfs:label "Approximate"@en ;
+    rdfs:comment "The relationship between the axes defined in the axis mapping corresponds closely to reality, with minor deviations (e.g., nearly parallel axes)."@en .
+
+spot-am:Broad a owl:NamedIndividual , spot-am:Accuracy ;
+    rdfs:label "Broad"@en ;
+    rdfs:comment "The source axis is assigned to the closest matching target axis in the context of the defined relationship, despite significant discrepancies."@en .
+
+# Object Properties
+
+spot-am:hasAxisMapping a owl:ObjectProperty ;
+    rdfs:label "has axis mapping"@en ;
+    rdfs:comment "Relates an appearance to an axis mapping object. One appearance can have multiple Axis Mappings. Typically three: For each Entity Axis one."@en ;
+    rdfs:domain spot:Appearance ;
+    rdfs:range spot-am:AxisMapping .
+
+spot-am:hasSourceAxis a owl:ObjectProperty ;
+    rdfs:label "has source axis"@en ;
+    rdfs:comment "Specifies which Entity Axis/Source axis is being mapped. Only Axes from Entity Spaces should be in the range of this property."@en ;
+    rdfs:domain spot-am:AxisMapping ;
+    rdfs:range [
+    a owl:Class ;
+    owl:intersectionOf (
+        spot:Axis
+        [ a owl:Restriction ;
+          owl:onProperty [ owl:inverseOf spot:hasAxis ] ;
+          owl:someValuesFrom  spot:EntitySpace
+        ]
+    )
+    ] ;
+    .
+
+spot-am:hasTargetAxis a owl:ObjectProperty ;
+    rdfs:label "has target axis"@en ;
+    rdfs:comment """Specifies to which target axis the source axis is mapped. The target axis must be from another space instance
+    as the source axis."""@en ;
+    rdfs:domain spot-am:AxisMapping ;
+    rdfs:range spot:Axis .
+
+spot-am:hasAxisRelationType a owl:ObjectProperty ;
+    rdfs:label "has axis relation type"@en ;
+    rdfs:comment "Specifies which kind of geometrical relation the two mapped axes have to each other."@en ;
+    rdfs:domain spot-am:AxisMapping ;
+    rdfs:range spot-am:AxisRelationType .
+
+
+
+spot-am:hasAccuracy a owl:ObjectProperty ;
+    rdfs:label "has accuracy"@en ;
+    rdfs:comment "Specifies the accuracy level of an axis mapping."@en ;
+    rdfs:domain spot-am:AxisMapping ;
+    rdfs:range spot-am:Accuracy .
+
+spot-am:hasBoundaryPoint a owl:ObjectProperty ;
+    rdfs:label "has boundary point"@en ;
+    rdfs:comment """Relates an axis to a boundary point. These points can than be mapped/related to a reference space.
+        Usually, only Axes of Entity Spaces get Boundary Point Definitions."""@en ;
+    rdfs:domain spot:Axis ;
+    rdfs:range spot-am:BoundaryPoint .
+
+spot-am:hasBoundaryPointMapping a owl:ObjectProperty ;
+    rdfs:label "has boundary point mapping"@en ;
+    rdfs:comment """Relates an appearance to a boundary point mapping. Each appearance can have multiple boundary point mappings.
+     For mappings of volume spaces, up to 6 boundary points mappings are usually needed (min and max point of each axis)."""@en ;
+    rdfs:domain spot:Appearance ;
+    rdfs:range spot-am:BoundaryPointMapping .
+
+spot-am:hasSourcePoint a owl:ObjectProperty ;
+    rdfs:label "has source point"@en ;
+    rdfs:comment "Specifies which EntityAxis/ Source boundary point is being mapping"@en ;
+    rdfs:domain spot-am:BoundaryPointMapping ;
+    rdfs:range spot-am:BoundaryPoint .
+
+
+
+#Exetensions of SPOT Properties with Property Chain Axioms
+spot:AppearsIn
+    owl:propertyChainAxiom ( spot-am:hasBoundaryPointMapping reloc:directionalRelation );
+    owl:propertyChainAxiom ( spot-am:hasAxisMapping spot-am:hasTargetAxis );
+    .
+
